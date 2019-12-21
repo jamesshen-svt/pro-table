@@ -24,12 +24,12 @@ var FullScreenIcon = function FullScreenIcon() {
     };
   }, []);
   return fullscreen ? React.createElement(_Tooltip, {
-    title: "\u9000\u51FA\u5168\u5C4F",
+    title: "Exit full screen",
     getPopupContainer: function getPopupContainer() {
       return document.getElementById('ant-design-pro-table') || document.body;
     }
   }, React.createElement(FullscreenExitOutlined, null)) : React.createElement(_Tooltip, {
-    title: "\u5168\u5C4F",
+    title: "Full screen",
     getPopupContainer: function getPopupContainer() {
       return document.getElementById('ant-design-pro-table') || document.body;
     }
