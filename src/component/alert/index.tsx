@@ -18,7 +18,7 @@ const TableAlert = <T, U = {}>({
   selectedRows = [],
   renderInfo = () => (
     <span>
-      已选择 <a style={{ fontWeight: 600 }}>{selectedRowKeys.length}</a> 项&nbsp;&nbsp;
+      Selected <a style={{ fontWeight: 600 }}>{selectedRowKeys.length}</a> records&nbsp;&nbsp;
     </span>
   ),
 }: TableAlertProps<T>) => (
@@ -39,7 +39,7 @@ const TableAlert = <T, U = {}>({
               <div className={`${className}-info`}>
                 <div className={`${className}-info-content`}>{dom}</div>
                 <div className={`${className}-info-option`}>
-                  <a onClick={onCleanSelected}>清空</a>
+                  <a onClick={onCleanSelected}>Clear</a>
                 </div>
               </div>
             }
