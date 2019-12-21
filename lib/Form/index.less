@@ -1,0 +1,29 @@
+@import '~antd/es/style/themes/default.less';
+
+@form-search-prefix-cls: ~'@{ant-prefix}-pro-table-form-search';
+
+.@{form-search-prefix-cls} {
+  margin-bottom: 24px;
+  padding: 24px;
+  padding-bottom: 0;
+  overflow: hidden;
+  background: @component-background;
+  transition: 0.3s all;
+  .ant-form-item-label {
+    min-width: 80px;
+    text-align: right;
+  }
+  .ant-form-item {
+    display: flex;
+  }
+
+  .ant-form-item-control-wrapper {
+    flex: 1;
+  }
+  &-option {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    text-align: right;
+  }
+}

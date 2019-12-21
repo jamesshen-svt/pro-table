@@ -1,0 +1,20 @@
+@import '~antd/es/style/themes/default.less';
+
+@table-prefix-cls: ~'@{ant-prefix}-pro-table';
+
+.@{table-prefix-cls} {
+  &:not(:root):fullscreen {
+    min-height: 100vh;
+    background: @component-background;
+  }
+  &-option-cell {
+    display: flex;
+    align-items: center;
+    &-item {
+      margin-right: 8px;
+    }
+  }
+  .@{ant-prefix}-pagination {
+    padding: 0 24px;
+  }
+}
