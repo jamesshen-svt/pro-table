@@ -12,7 +12,6 @@ _roadhog-api-doc
 /dist
 /.vscode
 /es
-/lib
 
 # misc
 .DS_Store
@@ -43,5 +42,4 @@ screenshot
 .firebase
 example/.temp/*
 .eslintcache
-lib/**
 es/**
