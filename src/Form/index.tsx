@@ -31,9 +31,9 @@ const FromInputRender: React.FC<{
     const { valueEnum } = item;
     if (valueEnum) {
       return (
-        <Select placeholder="请选择" ref={ref} {...rest}>
+        <Select placeholder="Select" ref={ref} {...rest}>
           <Select.Option key="all" value="all">
-            全部
+            All
           </Select.Option>
           {parsingValueEnumToArray(valueEnum).map(({ value, text }) => (
             <Select.Option key={value} value={value}>
@@ -43,13 +43,13 @@ const FromInputRender: React.FC<{
         </Select>
       );
     }
-    return <Input placeholder="请输入" {...rest} />;
+    return <Input placeholder="Please type" {...rest} />;
   }
   if (item.valueType === 'date') {
     return (
       <DatePicker
         ref={ref}
-        placeholder="请选择"
+        placeholder="Select"
         style={{
           width: '100%',
         }}
@@ -62,7 +62,7 @@ const FromInputRender: React.FC<{
       <DatePicker
         showTime
         ref={ref}
-        placeholder="请选择"
+        placeholder="Select"
         style={{
           width: '100%',
         }}
@@ -74,7 +74,7 @@ const FromInputRender: React.FC<{
     return (
       <TimePicker
         ref={ref}
-        placeholder="请选择"
+        placeholder="Select"
         style={{
           width: '100%',
         }}
@@ -94,7 +94,7 @@ const FromInputRender: React.FC<{
           return '';
         }}
         parser={value => (value ? value.replace(/\$\s?|(,*)/g, '') : '')}
-        placeholder="请输入"
+        placeholder="Please type"
         precision={2}
         style={{
           width: '100%',
@@ -202,7 +202,7 @@ const FormSearch = <T, U = {}>({ form, onSubmit, momentFormat = 'string' }: Form
                     className={`${className}-option`}
                   >
                     <Button type="primary" htmlType="submit" onClick={() => submit()}>
-                      搜索
+                      Search
                     </Button>
                     <Button
                       style={{ marginLeft: 8 }}
@@ -211,7 +211,7 @@ const FormSearch = <T, U = {}>({ form, onSubmit, momentFormat = 'string' }: Form
                         submit();
                       }}
                     >
-                      重置
+                      Reset
                     </Button>
                     {columnsList.length > 2 && (
                       <a
@@ -220,7 +220,7 @@ const FormSearch = <T, U = {}>({ form, onSubmit, momentFormat = 'string' }: Form
                           setCollapse(!collapse);
                         }}
                       >
-                        {collapse ? '展开' : '收起'}{' '}
+                        {collapse ? 'Unfold' : 'Collapse'}{' '}
                         <DownOutlined
                           style={{
                             transition: '0.3s all',

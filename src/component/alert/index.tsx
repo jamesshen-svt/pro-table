@@ -18,7 +18,7 @@ const TableAlert = <T, U = {}>({
   selectedRows = [],
   renderInfo = () => (
     <span>
-      已选择 <a style={{ fontWeight: 600 }}>{selectedRowKeys.length}</a> 项&nbsp;&nbsp;
+      Selected <a style={{ fontWeight: 600 }}>{selectedRowKeys.length}</a> records&nbsp;&nbsp;
     </span>
   ),
 }: TableAlertProps<T>) => (

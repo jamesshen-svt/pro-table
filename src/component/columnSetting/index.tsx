@@ -72,7 +72,7 @@ const CheckboxList: React.FC<{
           <ToolTipIcon
             columnKey={columnKey}
             fixed="left"
-            title="固定到左边"
+            title="fix to left"
             show={fixed !== 'left'}
           >
             <PushpinOutlined
@@ -80,13 +80,13 @@ const CheckboxList: React.FC<{
                 transform: 'rotate(-90deg)',
               }} />
           </ToolTipIcon>
-          <ToolTipIcon columnKey={columnKey} fixed={undefined} title="取消固定" show={!!fixed}>
+          <ToolTipIcon columnKey={columnKey} fixed={undefined} title="Cancel fix" show={!!fixed}>
             <VerticalAlignMiddleOutlined />
           </ToolTipIcon>
           <ToolTipIcon
             columnKey={columnKey}
             fixed="right"
-            title="固定到右边"
+            title="fix to right"
             show={fixed !== 'right'}
           >
             <PushpinOutlined />
@@ -110,14 +110,14 @@ const CheckboxList: React.FC<{
 
   return (
     <div className={`${className}-list`}>
-      {showLeft && <span className={`${className}-list-title`}>固定在左侧</span>}
+      {showLeft && <span className={`${className}-list-title`}>fix to left</span>}
       {leftList}
       {/* 如果没有任何固定，不需要显示title */}
       {list && list.length > 0 && (showLeft || showRight) && (
-        <span className={`${className}-list-title`}>不固定</span>
+        <span className={`${className}-list-title`}>unfixed</span>
       )}
       {list}
-      {showRight && <span className={`${className}-list-title`}>固定在右侧</span>}
+      {showRight && <span className={`${className}-list-title`}>fix to right</span>}
       {rightList}
     </div>
   );
@@ -190,14 +190,14 @@ const ColumnSetting = <T, U = {}>(props: ColumnSettingProps<T>) => {
                     }
                   }}
                 >
-                  列展示
+                  Col. display
                 </Checkbox>
                 <a
                   onClick={() => {
                     setColumnsMap({});
                   }}
                 >
-                  重置
+                  reset
                 </a>
               </div>
             }
@@ -206,7 +206,7 @@ const ColumnSetting = <T, U = {}>(props: ColumnSettingProps<T>) => {
             content={<CheckboxList className={className} localColumns={localColumns} />}
           >
             <Tooltip
-              title="列设置"
+              title="Col. display"
               getPopupContainer={() =>
                 ((document.getElementById('ant-design-pro-table') ||
                   document.body) as any) as HTMLElement

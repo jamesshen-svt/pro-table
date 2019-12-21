@@ -34,15 +34,15 @@ export interface ToolBarProps<T = unknown> {
 
 const buttonText = {
   fullScreen: {
-    text: '全屏',
+    text: 'Full screen',
     icon: <FullScreenIcon />,
   },
   reload: {
-    text: '刷新',
+    text: 'Refresh',
     icon: <ReloadOutlined />,
   },
   setting: {
-    text: '列设置',
+    text: 'Column setting',
     icon: <SettingOutlined />,
   },
 };
